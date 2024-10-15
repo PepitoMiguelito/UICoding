@@ -6,28 +6,41 @@ using System.Linq.Expressions;
 public class ImpGUI : MonoBehaviour
 {
 
-    public string labelText;
+    public string text = "FingerHeart";
+    private int agep1 = 17;
+    private int attackp1 = 50;
+    private int sizep1 = 8;
+   
+    
+    private int agep2 = 16;
+    private int attackp2 = 55;
+    private int sizep2 = 8;
+    
+    private int agep3 = 17;
+    private int attackp3 = 1;
+    private int sizep3 = 2;
+    
     private void OnGUI()
     {
         GUI.Box(new Rect(227, 120, 995, 400  ), "Options");        
 
-        if(GUI.Button(new Rect( 260 , 145, 90, 80 ), "Leader"))
+        if(GUI.Button(new Rect( 260 , 145, 90, 80 ), "Player One"))
         {
             print("Player One");
-            labelText = "Name: John\n\rAge: 17\n\rEthnicity : Filipino";
+            text = $"Name : John \r\n Ethnicity : Filipino \r\n Age: {agep1} \r\n Attack : {attackp1} \r\n Size : {sizep1} ";
         }
-        if (GUI.Button(new Rect(260, 275, 90, 80), "Big Booty Mf"))
+        if (GUI.Button(new Rect(260, 275, 90, 80), "Player Two"))
         {
             print("pTwo");
-            labelText = "Name: Andrei\n\rAge: 1999\n\rEthnicity : AncientBlack";
+            text = $"Name : Andrei \r\n Ethnicity : Filipino \r\n Age: {agep2} \r\n Attack : {attackp2} \r\n Size : {sizep2} "; 
         }
-        if (GUI.Button(new Rect(260, 415, 90, 80), "ScoliosisGuy"))
+        if (GUI.Button(new Rect(260, 415, 90, 80), "Player Three" ))
         {
             print("pThree");
-            labelText = "Name: Karl\n\rAge: 45\n\rEthnicity : African American\n\rAchievements : Child Sexual Abuse, Child Abusement, Child Predator, SmartSchoolBoy9 no.2";
+            text = $"Name : Karl \r\n Ethnicity : African American \r\n Age: {agep3} \r\n Attack : {attackp3} \r\n Size : {sizep3} ";
         }
 
-        GUI.Label(new Rect(750, 250, 200, 200), labelText);
+        GUI.Label(new Rect(750, 250, 200, 200), text);
     }
 
     
